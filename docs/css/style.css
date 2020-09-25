@@ -534,7 +534,7 @@ figure {
   transition: 0.3s;
 }
 .program.program-schedule img {
-  width: 40px !important;
+  width: 50px !important;
 }
 .program.program-schedule h3 {
   margin-bottom: 0;
@@ -664,89 +664,6 @@ figure {
 .fh5co-table-cell {
   display: table-cell;
   vertical-align: middle;
-}
-
-.fh5co-pricing {
-  padding: 7em 0;
-}
-@media screen and (max-width: 768px) {
-  .fh5co-pricing {
-    padding: 3em 0;
-  }
-}
-.fh5co-pricing .pricing {
-  display: block;
-  float: left;
-  margin-bottom: 30px;
-}
-.fh5co-pricing .price-box {
-  text-align: center;
-  padding: 30px;
-  background: #fff;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  -ms-border-radius: 5px;
-  border-radius: 5px;
-  margin-bottom: 40px;
-  position: relative;
-}
-.fh5co-pricing .price-box.popular .btn-select-plan {
-  background: #4CB648;
-}
-.fh5co-pricing .price-box.popular .price {
-  color: #4CB648;
-}
-.fh5co-pricing .price-box .btn-select-plan {
-  padding: 10px 20px;
-  background: #5bc0de;
-  color: #fff;
-}
-.fh5co-pricing .price-box .classes {
-  padding: 0;
-}
-.fh5co-pricing .price-box .classes li {
-  display: block;
-  list-style: none;
-  margin: 0;
-  font-size: 16px;
-  padding: 8px 10px;
-}
-.fh5co-pricing .price-box .classes li.color {
-  background: rgba(0, 0, 0, 0.04);
-}
-.fh5co-pricing .pricing-plan {
-  margin: 0 0 50px 0;
-  padding: 0;
-  font-size: 13px;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  font-weight: 700;
-  color: #888f94;
-}
-.fh5co-pricing .pricing-plan.pricing-plan-offer {
-  margin-bottom: 24px;
-}
-.fh5co-pricing .pricing-plan span {
-  display: block;
-  margin-top: 10px;
-  margin-bottom: 0;
-  color: #d5d8db;
-}
-.fh5co-pricing .price {
-  font-size: 72px;
-  color: #6d6d6d;
-  line-height: 50px;
-}
-.fh5co-pricing .price .currency {
-  font-size: 30px;
-  top: -0.9em;
-  padding-right: 10px;
-}
-.fh5co-pricing .price small {
-  font-size: 13px;
-  display: block;
-  text-transform: uppercase;
-  color: #888f94;
 }
 
 .team-section-grid {
