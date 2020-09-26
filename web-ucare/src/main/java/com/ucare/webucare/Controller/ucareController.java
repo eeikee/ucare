@@ -7,6 +7,6 @@ import org.springframework.web.bind.annotation.RestController;
 public class ucareController {
     @GetMapping("/")
     public String initialize(){
-        return "Wellcome to UCARE - V1.0";
+        return "Bem vindo ao UCARE - V1.0";
     }
 }
