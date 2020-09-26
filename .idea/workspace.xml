@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="049c8033-13ce-4a65-be14-554af7990658" name="Default Changelist" comment="" />
+    <list default="true" id="049c8033-13ce-4a65-be14-554af7990658" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/ucare-web/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ucare-web/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ucare-web/system.properties" beforeDir="false" afterPath="$PROJECT_DIR$/ucare-web/system.properties" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -39,6 +42,7 @@
       <updated>1600989173891</updated>
       <workItem from="1600989179039" duration="11000" />
       <workItem from="1600989203061" duration="25000" />
+      <workItem from="1601086268139" duration="9000" />
     </task>
     <servers />
   </component>
