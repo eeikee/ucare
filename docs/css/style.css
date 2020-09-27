@@ -780,6 +780,7 @@ figure {
   text-transform: uppercase;
 }
 
+
 .fh5co-blog {
   margin-bottom: 50px;
   position: relative;
@@ -1009,6 +1010,7 @@ figure {
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;
   transition: 0.3s;
+  border-radius: 30px;
 }
 .btn.btn-primary {
   background: #4CB648;
@@ -1022,7 +1024,7 @@ figure {
   color: #fff !important;
 }
 .btn:hover, .btn:active, .btn:focus {
-  background: #393e46 !important;
+  background: #4CB648 !important;
   color: #fff !important;
   outline: none !important;
 }
@@ -1291,7 +1293,11 @@ figure {
   left: 100px;
   top: 0;
 }
-
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .fh5co-loader {
   position: fixed;
   left: 0px;
