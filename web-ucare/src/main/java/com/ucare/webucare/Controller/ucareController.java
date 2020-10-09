@@ -1,11 +1,10 @@
 package com.ucare.webucare.Controller;
 
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
 
-@Controller
+@RestController
 public class ucareController {
 
     @GetMapping("/home")
@@ -24,7 +23,7 @@ public class ucareController {
         return modelAndView;
     }
 
-    @GetMapping("/docas")
+    @GetMapping("/dicas")
     public ModelAndView dicas(){
 
         final ModelAndView modelAndView = new ModelAndView();
@@ -61,6 +60,14 @@ public class ucareController {
 
         final ModelAndView modelAndView = new ModelAndView();
         modelAndView.setViewName("faleconosco");
+        return modelAndView;
+    }
+
+    @GetMapping("/error")
+    public ModelAndView error(){
+
+        final ModelAndView modelAndView = new ModelAndView();
+        modelAndView.setViewName("error");
         return modelAndView;
     }
 }
