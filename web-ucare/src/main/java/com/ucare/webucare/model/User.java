@@ -14,7 +14,7 @@ public class User {
 
     public static void main(String[] args) throws JSONException, ViaCEPException {
         ViaCEP viacep = new ViaCEP();
-        viacep.buscar(cep);
+        //viacep.buscar(cep);
         System.out.println(viacep.getBairro()+ " - " + viacep.getLogradouro());
 
     }
@@ -22,5 +22,6 @@ public class User {
     public boolean valida(String cfp){
         CPFValidator cpfValidator = new CPFValidator();
         cpfValidator.assertValid(cpf);
+        return true;
     }
 }
