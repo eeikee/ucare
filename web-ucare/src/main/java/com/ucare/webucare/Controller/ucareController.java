@@ -15,7 +15,16 @@ public class ucareController {
         return modelAndView;
     }
 
-    @GetMapping("/cadastro")
+    @GetMapping("/perfil")
+    public ModelAndView perfil(){
+
+        final ModelAndView modelAndView = new ModelAndView();
+        modelAndView.setViewName("perfil");
+        return modelAndView;
+    }
+
+
+        @GetMapping("/cadastro")
     public ModelAndView cadastro(){
 
         final ModelAndView modelAndView = new ModelAndView();
