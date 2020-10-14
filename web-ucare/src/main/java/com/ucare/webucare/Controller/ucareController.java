@@ -23,8 +23,7 @@ public class ucareController {
         return modelAndView;
     }
 
-
-        @GetMapping("/cadastro")
+    @GetMapping("/cadastro")
     public ModelAndView cadastro(){
 
         final ModelAndView modelAndView = new ModelAndView();
@@ -65,7 +64,7 @@ public class ucareController {
     }
 
     @GetMapping("/fale-conosco")
-    public ModelAndView faleConosco(){
+    public ModelAndView faleconosco(){
 
         final ModelAndView modelAndView = new ModelAndView();
         modelAndView.setViewName("faleconosco");
