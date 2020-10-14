@@ -9859,3 +9859,15 @@ textarea.form-control {
 .margin3{
   margin-top: 20px;
 }
+
+.text-perfil{
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  margin-left: 160px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.marginleft{
+  margin-left: 160px;
+}
