@@ -3,23 +3,25 @@ package com.ucare.webucare.model;
 import com.ucare.webucare.model.cep.ViaCEPException;
 import org.json.JSONException;
 
+import java.util.Date;
+
 public class Profissional extends User{
-    String data;
+    Date data;
     String hora;
     String crp;
 
-    public Profissional(String nomeCompleto, int idade, String cpf, String cep, String endereco, String cidade, String uf, String bairro, String numero, String email, String senha, String data, String hora, String crp) throws JSONException, ViaCEPException {
+    public Profissional(String nomeCompleto, int idade, String cpf, String cep, String endereco, String cidade, String uf, String bairro, String numero, String email, String senha, Date data, String hora, String crp) throws JSONException, ViaCEPException {
         super(nomeCompleto, idade, cpf, cep, endereco, cidade, uf, bairro, numero, email, senha);
         this.data = data;
         this.hora = hora;
         this.crp = crp;
     }
 
-    public String getData() {
+    public Date getData() {
         return data;
     }
 
-    public void setData(String data) {
+    public void setData(Date data) {
         this.data = data;
     }
 
