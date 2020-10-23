@@ -25,6 +25,9 @@
 
 	  <link rel="stylesheet" href="css/main.css">
 	  <link rel="stylesheet" href="css/util.css">
+
+	  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/css/bootstrap-datepicker.standalone.min.css" rel="stylesheet">
+
   </head>
   <body>
   	<div class="top py-1">
@@ -143,16 +146,16 @@
 								</select>
 							</div>
 						</div>
-						<div class="col-md-2 marginleft2">
-							<div class="row no-gutters justify-content-center pb-5 mb-3">
-								<select class="custom-select custom-select-sm">
-									<option selected>Abra este menu select</option>
-									<option value="1">Um</option>
-									<option value="2">Dois</option>
-									<option value="3">Três</option>
-								</select>
-							</div>
+
+						<form class="form-horizontal">
+						<div class="form-group">
+						<div class="col-sm-4">
+							<input type="text" class="form-control" id="calendar" data-provide="datepicker" data-date-format="dd/mm/yyyy"
+								   data-date-language="pt-BR" data-date-autoclose="true" data-date-today-highlight="true">
 						</div>
+						</div>
+						</form>
+
 						<div class="container-login100-form-btn m-t-32">
 							<button class="login100-form-btn">
 								AGENDAR
@@ -223,6 +226,8 @@
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
   <script src="js/google-map.js"></script>
   <script src="js/main.js"></script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/js/bootstrap-datepicker.min.js"></script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/locales/bootstrap-datepicker.pt-BR.min.js"></script>
     
   </body>
 </html>
