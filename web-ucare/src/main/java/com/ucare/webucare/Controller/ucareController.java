@@ -29,7 +29,7 @@ public class ucareController {
     @RequestMapping("/home")
     public ModelAndView home(){
 
-        final ModelAndView modelAndView = new ModelAndView("index");
+        ModelAndView modelAndView = new ModelAndView("index");
         return modelAndView;
     }
 
@@ -48,40 +48,38 @@ public class ucareController {
 
     @RequestMapping("/dicas")
     public ModelAndView dicas(){
-
-        final ModelAndView modelAndView = new ModelAndView("dicas");
+       ModelAndView modelAndView = new ModelAndView("dicas");
         return modelAndView;
     }
 
     @RequestMapping("/agendamentos")
     public ModelAndView agendamentos(){
 
-        final ModelAndView modelAndView = new ModelAndView("agendamentos");
+        ModelAndView modelAndView = new ModelAndView("agendamentos");
         return modelAndView;
     }
 
     @RequestMapping("/ajuda")
     public ModelAndView ajuda(){
-
-        final ModelAndView modelAndView = new ModelAndView();
-        modelAndView.setViewName("ajuda");
+        ModelAndView modelAndView = new ModelAndView("ajuda");
         return modelAndView;
     }
 
     @RequestMapping("/sobre")
     public ModelAndView sobre(){
 
-        final ModelAndView modelAndView = new ModelAndView("sobre");
+        ModelAndView modelAndView = new ModelAndView("sobre");
         return modelAndView;
     }
 
     @RequestMapping("/fale-conosco")
     public ModelAndView faleconosco(){
 
-        final ModelAndView modelAndView = new ModelAndView("faleconosco");
+        ModelAndView modelAndView = new ModelAndView("faleconosco");
         return modelAndView;
     }
-
+   
+    
     @GetMapping("/error")
     public ModelAndView error(){
 
@@ -94,16 +92,16 @@ public class ucareController {
     @RequestMapping(value = "/cadastro/paciente", method = RequestMethod.POST)
     public ModelAndView salvarPaciente(Paciente paciente) {
     	ModelAndView mView = new ModelAndView("cadastro");
+    	pacientes.save(paciente);
     	mView.addObject("mensagem", "Cadastro efetuado com sucesso!");
-    	System.out.println(">>>" + paciente.getNomeCompleto());
     	return mView;
     }
     
     @RequestMapping(value = "/cadastro/profissional", method = RequestMethod.POST)
     public ModelAndView salvarPaciente(Profissional profissional) {
     	ModelAndView mView = new ModelAndView("cadastro");
+    	profissionais.save(profissional);
     	mView.addObject("mensagem", "Cadastro efetuado com sucesso!");
-    	System.out.println(">>>" + profissional.getNomeCompleto());
     	return mView;
     }
     
