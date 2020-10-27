@@ -1,53 +1,66 @@
 package com.ucare.webucare.Controller;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.DataIntegrityViolationException;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
+import org.springframework.validation.Errors;
+import org.springframework.validation.annotation.Validated;
 
-@RestController
+import com.ucare.webucare.model.Paciente;
+import com.ucare.webucare.model.Profissional;
+import com.ucare.webucare.repository.Pacientes;
+import com.ucare.webucare.repository.Profissionais;
+
+@Controller
 public class ucareController {
 
-    @GetMapping("/home")
+	@Autowired
+	private Pacientes pacientes;
+	
+	@Autowired
+	private Profissionais profissionais;
+	
+    @RequestMapping("/home")
     public ModelAndView home(){
 
-        final ModelAndView modelAndView = new ModelAndView();
-        modelAndView.setViewName("index");
+        final ModelAndView modelAndView = new ModelAndView("index");
         return modelAndView;
     }
 
-    @GetMapping("/perfil")
+    @RequestMapping("/perfil")
     public ModelAndView perfil(){
 
-        final ModelAndView modelAndView = new ModelAndView();
-        modelAndView.setViewName("perfil");
+        ModelAndView modelAndView = new ModelAndView("perfil");
         return modelAndView;
     }
 
-    @GetMapping("/cadastro")
+    @RequestMapping("/cadastro")
     public ModelAndView cadastro(){
-
-        final ModelAndView modelAndView = new ModelAndView();
-        modelAndView.setViewName("cadastro");
+        ModelAndView modelAndView = new ModelAndView("cadastro");
         return modelAndView;
     }
 
-    @GetMapping("/dicas")
+    @RequestMapping("/dicas")
     public ModelAndView dicas(){
 
-        final ModelAndView modelAndView = new ModelAndView();
-        modelAndView.setViewName("dicas");
+        final ModelAndView modelAndView = new ModelAndView("dicas");
         return modelAndView;
     }
 
-    @GetMapping("/agendamentos")
+    @RequestMapping("/agendamentos")
     public ModelAndView agendamentos(){
 
-        final ModelAndView modelAndView = new ModelAndView();
-        modelAndView.setViewName("agendamentos");
+        final ModelAndView modelAndView = new ModelAndView("agendamentos");
         return modelAndView;
     }
 
-    @GetMapping("/ajuda")
+    @RequestMapping("/ajuda")
     public ModelAndView ajuda(){
 
         final ModelAndView modelAndView = new ModelAndView();
@@ -55,19 +68,17 @@ public class ucareController {
         return modelAndView;
     }
 
-    @GetMapping("/sobre")
+    @RequestMapping("/sobre")
     public ModelAndView sobre(){
 
-        final ModelAndView modelAndView = new ModelAndView();
-        modelAndView.setViewName("sobre");
+        final ModelAndView modelAndView = new ModelAndView("sobre");
         return modelAndView;
     }
 
-    @GetMapping("/fale-conosco")
+    @RequestMapping("/fale-conosco")
     public ModelAndView faleconosco(){
 
-        final ModelAndView modelAndView = new ModelAndView();
-        modelAndView.setViewName("faleconosco");
+        final ModelAndView modelAndView = new ModelAndView("faleconosco");
         return modelAndView;
     }
 
@@ -77,5 +88,23 @@ public class ucareController {
         final ModelAndView modelAndView = new ModelAndView();
         modelAndView.setViewName("error");
         return modelAndView;
+        
     }
+    
+    @RequestMapping(value = "/cadastro/paciente", method = RequestMethod.POST)
+    public ModelAndView salvarPaciente(Paciente paciente) {
+    	ModelAndView mView = new ModelAndView("cadastro");
+    	mView.addObject("mensagem", "Cadastro efetuado com sucesso!");
+    	System.out.println(">>>" + paciente.getNomeCompleto());
+    	return mView;
+    }
+    
+    @RequestMapping(value = "/cadastro/profissional", method = RequestMethod.POST)
+    public ModelAndView salvarPaciente(Profissional profissional) {
+    	ModelAndView mView = new ModelAndView("cadastro");
+    	mView.addObject("mensagem", "Cadastro efetuado com sucesso!");
+    	System.out.println(">>>" + profissional.getNomeCompleto());
+    	return mView;
+    }
+    
 }

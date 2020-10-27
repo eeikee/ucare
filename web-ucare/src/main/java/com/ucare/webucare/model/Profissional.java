@@ -5,17 +5,18 @@ import org.json.JSONException;
 
 import java.util.Date;
 
+import javax.persistence.DiscriminatorValue;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
 public class Profissional extends User{
+	
     Date data;
     String hora;
     String crp;
-
-    public Profissional(String nomeCompleto, int idade, String cpf, String cep, String endereco, String cidade, String uf, String bairro, String numero, String email, String senha, Date data, String hora, String crp) throws JSONException, ViaCEPException {
-        super(nomeCompleto, idade, cpf, cep, endereco, cidade, uf, bairro, numero, email, senha);
-        this.data = data;
-        this.hora = hora;
-        this.crp = crp;
-    }
 
     public Date getData() {
         return data;

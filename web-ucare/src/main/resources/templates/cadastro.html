@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
   <head>
     <title>UCARE</title>
     <meta charset="utf-8">
@@ -103,6 +104,10 @@
 		</div>
 	</section>
 
+<div class="alert alert-success"
+			th:if="${!#strings.isEmpty(mensagem)}">
+			<span th:text="${mensagem}"></span>
+		</div>
 
 		  <section class="ftco-section ftco-no-pt ftco-no-pb">
     	<div class="container">
@@ -138,31 +143,31 @@
 				<div class="wrap-appointment d-md-flex">
 					<div class="col-md-8 bg-primary p-5 heading-section heading-section-white">
 						<h2 class="mb-4">CADASTRO PACIENTE</h2>
-						<form action="#" class="appointment">
+						<form class="appointment" method="POST" action="/cadastro/paciente" >
 							<div class="row justify-content-center">
 									<div class="col-md-6">
 										<div class="form-group">
-							  <input type="text" class="form-control" placeholder="Nome completo">
+							  <input type="text" class="form-control" placeholder="Nome completo" id="nomeCompleto" name="nomeCompleto">
 							</div>
 									</div>
 									<div class="col-md-2">
 										<div class="form-group">
-							  <input type="text" class="form-control" placeholder="Idade">
+							  <input type="text" class="form-control" placeholder="Idade" id="idade" name="idade">
 							</div>
 									</div>
 									<div class="col-md-4">
 										<div class="form-group">
-							  <input type="text" class="form-control" placeholder="CPF">
+							  <input type="text" class="form-control" placeholder="CPF" id="cpf" name="cpf">
 							</div>
 									</div>
 									<div class="col-md-4">
 										<div class="form-group">
-							  <input type="text" class="form-control" placeholder="CEP">
+							  <input type="text" class="form-control" placeholder="CEP" id="cep" name="cep">
 							</div>
 									</div>
 									<div class="col-md-4">
 										<div class="form-group">
-							  <input type="text" class="form-control" placeholder="Cidade">
+							  <input type="text" class="form-control" placeholder="Cidade"  id="cidade" name="cidade">
 							</div>
 									</div>
 									<div class="col-md-4">
@@ -170,14 +175,14 @@
 										<div class="form-field">
 									  <div class="select-wrap">
 							  <div class="icon"><span class="fa fa-chevron-down"></span></div>
-							  <select name="" id="" class="form-control">
-								  <option value="">Selecione a UF</option>
-								<option value="">Spinal Manupulation</option>
-								<option value="">Electrotherapy</option>
-								<option value="">Manual Lymphatic</option>
-								<option value="">Medical Acupuncture</option>
-								<option value="">Therapeutic Exercise</option>
-								<option value="">Joint Mobilization</option>
+							  <select name="uf" id="uf" class="form-control">
+								  <option value="a">Selecione a UF</option>
+								<option value="b">Spinal Manupulation</option>
+								<option value="c">Electrotherapy</option>
+								<option value="d">Manual Lymphatic</option>
+								<option value="e">Medical Acupuncture</option>
+								<option value="f">Therapeutic Exercise</option>
+								<option value="g">Joint Mobilization</option>
 							  </select>
 							</div>
 							  </div>
@@ -185,27 +190,27 @@
 									</div>
 									<div class="col-md-4">
 										<div class="form-group">
-							  <input type="text" class="form-control" placeholder="Bairro">
+							  <input type="text" class="form-control" placeholder="Bairro" id="bairro" name="bairro">
 							</div>
 									</div>
 									<div class="col-md-6">
 										<div class="form-group">
-							  <input type="text" class="form-control" placeholder="Endereço">
+							  <input type="text" class="form-control" placeholder="Endereço" id="bairro" name="endereco">
 							</div>
 									</div>
 									<div class="col-md-2">
 										<div class="form-group">
-							  <input type="text" class="form-control" placeholder="Número">
+							  <input type="text" class="form-control" placeholder="Número" id="bairro" name="numero">
 							</div>
 									</div>
 									<div class="col-md-6">
 										<div class="form-group">
-							  <input type="text" class="form-control" placeholder="Email">
+							  <input type="text" class="form-control" placeholder="Email" id="email" name="email">
 							</div>
 									</div>
 									<div class="col-md-4">
 										<div class="form-group">
-							  <input type="text" class="form-control" placeholder="Senha">
+							  <input type="text" class="form-control" placeholder="Senha" id="senha" name="senha">
 							</div>
 						</div>
 						</div>
@@ -237,7 +242,7 @@
 				<div class="wrap-appointment d-md-flex">
 					<div class="col-md-8 bg-primary p-5 heading-section heading-section-white">
 						<h2 class="mb-4">CADASTRO PROFISSIONAL</h2>
-						<form action="#" class="appointment">
+						<form class="appointment" method="POST" action="/cadastro/profissional" >
 							<div class="row justify-content-center">
 									<div class="col-md-6">
 										<div class="form-group">
