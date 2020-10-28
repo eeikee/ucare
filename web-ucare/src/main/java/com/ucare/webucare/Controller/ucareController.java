@@ -52,6 +52,24 @@ public class ucareController {
         return modelAndView;
     }
 
+    @RequestMapping("/dicas/respiracao")
+    public ModelAndView dicasRespiracao(){
+        final ModelAndView modelAndView = new ModelAndView("dicas-respiracao");
+        return modelAndView;
+    }
+
+    @RequestMapping("/dicas/meditacao")
+    public ModelAndView dicasMeditacao(){
+        final ModelAndView modelAndView = new ModelAndView("dicas-meditacao");
+        return modelAndView;
+    }
+
+    @RequestMapping("/dicas/relaxar")
+    public ModelAndView dicasRelaxar(){
+        final ModelAndView modelAndView = new ModelAndView("dicas-relaxar");
+        return modelAndView;
+    }
+
     @RequestMapping("/agendamentos")
     public ModelAndView agendamentos(){
 
@@ -82,11 +100,8 @@ public class ucareController {
     
     @GetMapping("/error")
     public ModelAndView error(){
-
-        final ModelAndView modelAndView = new ModelAndView();
-        modelAndView.setViewName("error");
+        final ModelAndView modelAndView = new ModelAndView("error");
         return modelAndView;
-        
     }
     
     @RequestMapping(value = "/cadastro/paciente", method = RequestMethod.POST)
