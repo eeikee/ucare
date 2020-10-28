@@ -2,13 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="049c8033-13ce-4a65-be14-554af7990658" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/ucare-web/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ucare-web/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ucare-web/system.properties" beforeDir="false" afterPath="$PROJECT_DIR$/ucare-web/system.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web-ucare/src/main/resources/static/images/meditar.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/sass/style.scss" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sass/style.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-ucare/src/main/java/com/ucare/webucare/Controller/ucareController.java" beforeDir="false" afterPath="$PROJECT_DIR$/web-ucare/src/main/java/com/ucare/webucare/Controller/ucareController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-ucare/src/main/resources/templates/ajuda.html" beforeDir="false" afterPath="$PROJECT_DIR$/web-ucare/src/main/resources/templates/ajuda.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-ucare/src/main/resources/templates/dicas.html" beforeDir="false" afterPath="$PROJECT_DIR$/web-ucare/src/main/resources/templates/dicas.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -26,11 +37,78 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/web-ucare/src/main/resources/templates/imagem" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\toliveira\Documents\ucare\web-ucare\src\main\resources\static\images" />
+      <recent name="C:\Users\toliveira\Documents\ucare\docs\images" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\toliveira\Documents\ucare\web-ucare\src\main\resources\templates\imagem" />
+      <recent name="C:\Users\toliveira\Documents\ucare\web-ucare\src\main\resources\templates" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="[spring-boot:run]" type="MavenRunConfiguration" factoryName="Maven" nameIsGenerated="true">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list>
+                <option value="spring-boot:run" />
+              </list>
+            </option>
+            <option name="pomFileName" />
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$/web-ucare" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="MavenRunConfiguration" factoryName="Maven">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list>
+                <option value="clean" />
+                <option value="install" />
+              </list>
+            </option>
+            <option name="pomFileName" />
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method v="2" />
+    </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -48,5 +126,56 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="163" y="0" key="#Project_Structure" timestamp="1603651159535">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="163" y="0" key="#Project_Structure/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1603651159535" />
+    <state x="247" y="0" width="1119" height="691" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1603652016193">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="247" y="0" width="1119" height="691" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1603652016193" />
+    <state x="426" y="153" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1603651222654">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="426" y="153" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1603651222654" />
+    <state x="1676" y="0" key="CommitChangelistDialog2" timestamp="1603658302775">
+      <screen x="1366" y="0" width="1366" height="728" />
+    </state>
+    <state x="1676" y="0" key="CommitChangelistDialog2/0.0.1366.728/1366.0.1366.728@1366.0.1366.728" timestamp="1603658302775" />
+    <state x="1704" y="100" key="FileChooserDialogImpl" timestamp="1603652014116">
+      <screen x="1366" y="0" width="1366" height="728" />
+    </state>
+    <state x="1704" y="100" key="FileChooserDialogImpl/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1603652014116" />
+    <state width="1323" height="95" key="GridCell.Tab.0.bottom" timestamp="1603848828020">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="95" key="GridCell.Tab.0.bottom/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1603848828020" />
+    <state width="1323" height="95" key="GridCell.Tab.0.bottom/0.0.1366.728/1366.0.1366.728@1366.0.1366.728" timestamp="1603659443783" />
+    <state width="1323" height="95" key="GridCell.Tab.0.center" timestamp="1603848828019">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="95" key="GridCell.Tab.0.center/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1603848828019" />
+    <state width="1323" height="95" key="GridCell.Tab.0.center/0.0.1366.728/1366.0.1366.728@1366.0.1366.728" timestamp="1603659443783" />
+    <state width="1323" height="95" key="GridCell.Tab.0.left" timestamp="1603848828019">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="95" key="GridCell.Tab.0.left/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1603848828019" />
+    <state width="1323" height="95" key="GridCell.Tab.0.left/0.0.1366.728/1366.0.1366.728@1366.0.1366.728" timestamp="1603659443783" />
+    <state width="1323" height="95" key="GridCell.Tab.0.right" timestamp="1603848828020">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="95" key="GridCell.Tab.0.right/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1603848828020" />
+    <state width="1323" height="95" key="GridCell.Tab.0.right/0.0.1366.728/1366.0.1366.728@1366.0.1366.728" timestamp="1603659443783" />
+    <state x="389" y="0" width="587" height="728" key="find.popup" timestamp="1603660119243">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="389" y="0" width="587" height="728" key="find.popup/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1603660119243" />
+    <state x="1755" y="0" width="587" height="728" key="find.popup/0.0.1366.728/1366.0.1366.728@1366.0.1366.728" timestamp="1603658905429" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1603660663812">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1603660663812" />
   </component>
 </project>

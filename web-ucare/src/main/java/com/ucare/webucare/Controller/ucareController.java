@@ -39,6 +39,30 @@ public class ucareController {
         return modelAndView;
     }
 
+    @GetMapping("/dicas-respiracao")
+    public ModelAndView dicasRespiracao(){
+
+        final ModelAndView modelAndView = new ModelAndView();
+        modelAndView.setViewName("dicas-respiracao");
+        return modelAndView;
+    }
+
+    @GetMapping("/dicas-meditacao")
+    public ModelAndView dicasMeditacao(){
+
+        final ModelAndView modelAndView = new ModelAndView();
+        modelAndView.setViewName("dicas-meditacao");
+        return modelAndView;
+    }
+
+    @GetMapping("/dicas-relaxar")
+    public ModelAndView dicasRelaxar(){
+
+        final ModelAndView modelAndView = new ModelAndView();
+        modelAndView.setViewName("dicas-relaxar");
+        return modelAndView;
+    }
+
     @GetMapping("/agendamentos")
     public ModelAndView agendamentos(){
 
