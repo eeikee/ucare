@@ -83,6 +83,19 @@ public class ucareController {
         return modelAndView;
     }
 
+    @RequestMapping("/ajuda/cadastro")
+    public ModelAndView ajudaCadastro(){
+        final ModelAndView modelAndView = new ModelAndView("ajuda-cadastro");
+        return modelAndView;
+    }
+
+    @RequestMapping("/ajuda/agendar")
+    public ModelAndView ajudaAgendar(){
+        final ModelAndView modelAndView = new ModelAndView("ajuda-agendar");
+        return modelAndView;
+    }
+
+
     @RequestMapping("/sobre")
     public ModelAndView sobre(){
 
