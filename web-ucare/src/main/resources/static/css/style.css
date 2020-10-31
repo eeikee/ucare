@@ -9865,6 +9865,9 @@ textarea.form-control {
 .margin3{
   margin-top: 20px;
 }
+.margin4{
+  margin-top: 47px;
+}
 
 .text-perfil{
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -9882,6 +9885,26 @@ textarea.form-control {
  
 }
 
+.marginleft3{
+  margin-left: 440px;
+ 
+}
+
+.marginleft4{
+  margin-left: 60px;
+ 
+}
+
+.marginleft5{
+  margin-left: 35px;
+ 
+}
+.marginleft6{
+  margin-left: 40px;
+ 
+}
+
 .nav-item a:active,a:focus{
   color: #ffffff;
 }
+
