@@ -9881,7 +9881,7 @@ textarea.form-control {
   margin-left: 160px;
 }
 .marginleft2{
-  margin-left: 260px;
+  margin-left: 270px;
  
 }
 
@@ -9902,6 +9902,25 @@ textarea.form-control {
 .marginleft6{
   margin-left: 40px;
  
+}
+.marginleft7{
+  margin-left: 370px;
+ 
+}
+.marginleft8{
+  margin-left: -10px;
+ 
+}
+.marginleft9{
+  margin-left: 20px;
+ 
+}
+.marginleft-20{
+  margin-left: -60px;
+ 
+}
+.marginajuda{
+	margin-left: 400px;
 }
 
 .nav-item a:active,a:focus{

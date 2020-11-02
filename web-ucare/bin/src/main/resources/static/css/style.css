@@ -59,6 +59,12 @@ body {
   text-align: left;
   background-color: #fff; }
 
+ul li.active a{
+	background:  #fff;
+	color: #01d28e;
+}
+
+
 [tabindex="-1"]:focus {
   outline: 0 !important; }
 
@@ -9874,4 +9880,8 @@ textarea.form-control {
 .marginleft2{
   margin-left: 260px;
  
+}
+
+.nav-item a:active,a:focus{
+  color: #ffffff;
 }
