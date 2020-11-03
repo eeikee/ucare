@@ -39,6 +39,13 @@ public class ucareController {
         ModelAndView modelAndView = new ModelAndView("perfil");
         return modelAndView;
     }
+    
+    @RequestMapping("/minhasconsultas")
+    public ModelAndView minhasconsultas(){
+
+        ModelAndView modelAndView = new ModelAndView("minhasconsultas");
+        return modelAndView;
+    }
 
     @RequestMapping("/cadastro")
     public ModelAndView cadastro(){
