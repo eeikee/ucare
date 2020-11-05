@@ -9925,7 +9925,12 @@ textarea.form-control {
 .marginconsulta{
 	margin-left: 230px;
 }
-
+.marginleft10{
+	margin-left: 72px;
+}
+.marginajudagend{
+	margin-left: 250px;
+}
 .nav-item a:active,a:focus{
   color: #ffffff;
 }
