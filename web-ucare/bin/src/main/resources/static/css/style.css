@@ -9865,6 +9865,9 @@ textarea.form-control {
 .margin3{
   margin-top: 20px;
 }
+.margin4{
+  margin-top: 47px;
+}
 
 .text-perfil{
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -9878,10 +9881,49 @@ textarea.form-control {
   margin-left: 160px;
 }
 .marginleft2{
-  margin-left: 260px;
+  margin-left: 270px;
  
+}
+
+.marginleft3{
+  margin-left: 440px;
+ 
+}
+
+.marginleft4{
+  margin-left: 60px;
+ 
+}
+
+.marginleft5{
+  margin-left: 35px;
+ 
+}
+.marginleft6{
+  margin-left: 40px;
+ 
+}
+.marginleft7{
+  margin-left: 370px;
+ 
+}
+.marginleft8{
+  margin-left: -10px;
+ 
+}
+.marginleft9{
+  margin-left: 20px;
+ 
+}
+.marginleft-20{
+  margin-left: -60px;
+ 
+}
+.marginajuda{
+	margin-left: 400px;
 }
 
 .nav-item a:active,a:focus{
   color: #ffffff;
 }
+
