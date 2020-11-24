@@ -49,8 +49,7 @@
 							<div class="row no-gutters justify-content-center  mb-3">
 								<select class="custom-select custom-select-sm">
 									<option selected>Escolha o profissinal</option>
-									<option value="1">Dr. Andressa Guimarães</option>
-									<option value="2">Dr. Rafael Godoi</option>
+									<option th:each="psicologo : ${todosPsicologo}"th:text="|Dr. ${psicologo}|" ></option>
 								</select>
 						</div>					
 						

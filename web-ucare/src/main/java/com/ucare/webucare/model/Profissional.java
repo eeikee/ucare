@@ -1,40 +1,55 @@
 package com.ucare.webucare.model;
 
-import com.ucare.webucare.model.cep.ViaCEPException;
-import org.json.JSONException;
+import java.util.List;
 
-import java.util.Date;
-
-import javax.persistence.DiscriminatorValue;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
+import javax.persistence.Table;
 
 @Entity
+@Table(name = "profissional")
 public class Profissional extends User{
-	
-    Date data;
-    String hora;
-    String crp;
 
-    public Date getData() {
-        return data;
-    }
+	private String crp;
+    
+    private String horaInicio;
+    private String horaFim;
+   
+	@ManyToMany
+	@JoinTable(
+			name= "profissional_dias",
+			joinColumns = @JoinColumn(name = "profissional_id"),
+			inverseJoinColumns = @JoinColumn(name="dias_id"))
+    private List<Dias> dias;
+    
 
-    public void setData(Date data) {
-        this.data = data;
-    }
+    public List<Dias> getDias() {
+		return dias;
+	}
 
-    public String getHora() {
-        return hora;
-    }
+	public void setDias(List<Dias> dias) {
+		this.dias = dias;
+	}
 
-    public void setHora(String hora) {
-        this.hora = hora;
-    }
+    public String getHoraInicio() {
+		return horaInicio;
+	}
 
-    public String getCrp() {
+	public void setHoraInicio(String horaInicio) {
+		this.horaInicio = horaInicio;
+	}
+
+	public String getHoraFim() {
+		return horaFim;
+	}
+
+	public void setHoraFim(String horaFim) {
+		this.horaFim = horaFim;
+	}
+
+	public String getCrp() {
         return crp;
     }
 

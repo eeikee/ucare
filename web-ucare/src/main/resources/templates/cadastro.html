@@ -1,341 +1,346 @@
 <!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml"
-	xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="DefaultLayout">
-  <head>
-    <title>UCARE - CADASTRO</title>
-  </head>
-  <section layout:fragment="content">	
-  
-  <div class="collapse navbar-collapse" id="ftco-nav">
-	        <ul class="navbar-nav mr-auto">
-				<li class="nav-item">
-					<a class="nav-link" href="/home">HOME</a>
-				</li>
-				<li class="nav-item active"><a href="/cadastro" class="nav-link">CADASTRO</a></li>
-	        	<li class="nav-item"><a href="/agendamentos" class="nav-link">AGENDAMENTOS</a></li>
-	        	<li class="nav-item"><a href="/dicas" class="nav-link">DICAS</a></li>
-	        	<li class="nav-item"><a href="/ajuda" class="nav-link">AJUDA</a></li>
-	        	<li class="nav-item"><a href="/sobre" class="nav-link">SOBRE</a></li>
-	        	<li class="nav-item"><a href="/fale-conosco" class="nav-link">FALE CONOSCO</a></li>
-	        </ul>
-	      </div>
-	    </div>
-	  </nav>
+	xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorate="DefaultLayout">
+<head>
+<title>UCARE - CADASTRO</title>
+</head>
+<section layout:fragment="content">
 
-    <section class="hero-wrap hero-wrap-2" style="background-image: url('images/consulta.jpeg.jpg')" data-stellar-background-ratio="0.5">
+	<div class="collapse navbar-collapse" id="ftco-nav">
+		<ul class="navbar-nav mr-auto">
+			<li class="nav-item"><a class="nav-link" href="/home">HOME</a></li>
+			<li class="nav-item active"><a href="/cadastro" class="nav-link">CADASTRO</a></li>
+			<li class="nav-item"><a href="/agendamentos" class="nav-link">AGENDAMENTOS</a></li>
+			<li class="nav-item"><a href="/dicas" class="nav-link">DICAS</a></li>
+			<li class="nav-item"><a href="/ajuda" class="nav-link">AJUDA</a></li>
+			<li class="nav-item"><a href="/sobre" class="nav-link">SOBRE</a></li>
+			<li class="nav-item"><a href="/fale-conosco" class="nav-link">FALE
+					CONOSCO</a></li>
+		</ul>
+	</div>
+	</div>
+	</nav>
+
+	<section class="hero-wrap hero-wrap-2"
+		style="background-image: url('images/consulta.jpeg.jpg')"
+		data-stellar-background-ratio="0.5">
 		<div class="overlay"></div>
 		<div class="container">
 			<div class="row no-gutters slider-text align-items-end">
 				<div class="col-md-9 ftco-animate pb-5">
-					<p class="breadcrumbs mb-2"><span class="mr-2"><a href="/home">Home<i class="fa fa-chevron-right"></i></a></span> <span>Cadastro<i class="fa fa-chevron-right"></i></span></p>
+					<p class="breadcrumbs mb-2">
+						<span class="mr-2"><a href="/home">Home<i
+								class="fa fa-chevron-right"></i></a></span> <span>Cadastro<i
+							class="fa fa-chevron-right"></i></span>
+					</p>
 					<h1 class="mb-0 bread">Cadastro</h1>
 				</div>
 			</div>
 		</div>
 	</section>
 
-<div class="alert alert-success"
-			th:if="${!#strings.isEmpty(mensagem)}">
-			<span th:text="${mensagem}"></span>
-		</div>
+	<div class="alert alert-success" th:if="${!#strings.isEmpty(mensagem)}">
+		<span th:text="${mensagem}"></span>
+	</div>
 
-		  <section class="ftco-section ftco-no-pt ftco-no-pb">
-    	<div class="container">
-    		<div class="row d-flex no-gutters">
-    		
-    				<div class="row justify-content-start py-5">
-		          <div class="col-md-12 heading-section ftco-animate">
-		          	<span class="subheading">Bem-vindo ao UCARE</span>
-		            <h2 class="mb-4">Selecione sua opção desejada!</h2>
-					<p><a href="#cadastro-paciente" class="btn btn-primary">Sou paciente</a></p>
-					<p><a href="#cadastro-profissional" class="btn btn-primary margin2">Sou profissional</a></p>
-		          </div>
-		        </div>
-	        </div>
-    	</div>
+	<section class="ftco-section ftco-no-pt ftco-no-pb">
+		<div class="container">
+			<div class="row d-flex no-gutters">
+
+				<div class="row justify-content-start py-5">
+					<div class="col-md-12 heading-section ftco-animate">
+						<span class="subheading">Bem-vindo ao UCARE</span>
+						<h2 class="mb-4">Selecione sua opção desejada!</h2>
+						<p>
+							<a href="#cadastro-paciente" class="btn btn-primary">Sou
+								paciente</a>
+						</p>
+						<p>
+							<a href="#cadastro-profissional" class="btn btn-primary margin2">Sou
+								profissional</a>
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
 	</section>
 
 	<section class="ftco-section">
-    	<div class="container">
-    		<div class="row">
-    			<div class="col-md-8">
-    			</div>
-    		</div>
-    	</div>
-	</section>
-	
-	<section id="cadastro-paciente" class="ftco-appointment ftco-section ftco-no-pt ftco-no-pb">
-		<div class="overlay"></div>
-	<div class="container">
-		<div class="row d-md-flex justify-content-center">
-			<div class="col-md-12">
-				<div class="wrap-appointment d-md-flex">
-					<div class="col-md-12 bg-primary p-5 heading-section heading-section-white">
-						<h2 class="mb-4">CADASTRO PACIENTE</h2>
-						<form class="appointment" method="POST" action="/cadastro/paciente" >
-							<div class="row justify-content-center">
-									<div class="col-md-6">
-										<div class="form-group">
-							  <input type="text" class="form-control" placeholder="Nome completo" id="nomeCompleto" name="nomeCompleto">
-							</div>
-									</div>
-									<div class="col-md-2">
-										<div class="form-group">
-							  <input type="text" class="form-control" placeholder="Idade" id="idade" name="idade">
-							</div>
-									</div>
-									<div class="col-md-4">
-										<div class="form-group">
-							  <input type="text" class="form-control" placeholder="CPF" id="cpf" name="cpf">
-							</div>
-									</div>
-									<div class="col-md-4">
-										<div class="form-group">
-							  <input type="text" class="form-control" placeholder="CEP" id="cep" name="cep">
-							</div>
-									</div>
-									<div class="col-md-4">
-										<div class="form-group">
-							  <input type="text" class="form-control" placeholder="Cidade"  id="cidade" name="cidade">
-							</div>
-									</div>
-									<div class="col-md-4">
-										<div class="form-group">
-										<div class="form-field">
-									  <div class="select-wrap">
-							  <div class="icon"><span class="fa fa-chevron-down"></span></div>
-							  <select name="uf" id="uf" class="form-control">
-								  <option value="a">Selecione a UF</option>
-								<option value="b">AC</option>
-								<option value="c">AL</option>
-								<option value="d">AP</option>
-								<option value="e">AM</option>
-								<option value="f">BA</option>
-								<option value="g">CE</option>
-								<option value="h">DF</option>
-								<option value="i">ES</option>
-								<option value="j">GO</option>
-								<option value="k">MA</option>
-								<option value="l">MT</option>
-								<option value="m">MS</option>
-								<option value="n">MG</option>
-								<option value="o">PA</option>
-								<option value="p">PB</option>
-								<option value="q">PR</option>
-								<option value="r">PE</option>
-								<option value="s">PI</option>
-								<option value="t">RJ</option>
-								<option value="w">RN</option>
-								<option value="x">RS</option>
-								<option value="y">RO</option>
-								<option value="z">RR</option>
-								<option value="01">SC</option>
-								<option value="02">SP</option>
-								<option value="03">SE</option>
-								<option value="04">TO</option>
-							  </select>
-							</div>
-							  </div>
-									</div>
-									</div>
-									<div class="col-md-4">
-										<div class="form-group">
-							  <input type="text" class="form-control" placeholder="Bairro" id="bairro" name="bairro">
-							</div>
-									</div>
-									<div class="col-md-6">
-										<div class="form-group">
-							  <input type="text" class="form-control" placeholder="Endereço" id="bairro" name="endereco">
-							</div>
-									</div>
-									<div class="col-md-2">
-										<div class="form-group">
-							  <input type="text" class="form-control" placeholder="Número" id="bairro" name="numero">
-							</div>
-									</div>
-									<div class="col-md-6">
-										<div class="form-group">
-							  <input type="text" class="form-control" placeholder="Email" id="email" name="email">
-							</div>
-									</div>
-									<div class="col-md-4">
-										<div class="form-group">
-							  <input type="text" class="form-control" placeholder="Senha" id="senha" name="senha">
-							</div>
-						</div>
-						</div>
-						<div class="container-login100-form-btn m-t-32 marginleft8">
-						<button class="login100-form-btn">
-							Cadastrar
-						</button>
-					</div>
-				</div>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-8"></div>
 			</div>
 		</div>
-	</div>
-</section>
+	</section>
 
-    <section class="ftco-section">
-    	<div class="container">
-    		<div class="row">
-    			<div class="col-md-8">
-    			</div>
-    		</div>
-    	</div>
-	</section>
-	
-	<section id="cadastro-profissional" class="ftco-appointment ftco-section ftco-no-pt ftco-no-pb">
+	<section id="cadastro-paciente"
+		class="ftco-appointment ftco-section ftco-no-pt ftco-no-pb">
 		<div class="overlay"></div>
-	<div class="container">
-		<div class="row d-md-flex justify-content-center">
-			<div class="col-md-12">
-				<div class="wrap-appointment d-md-flex">
-					<div class="col-md-12 bg-primary p-5 heading-section heading-section-white">
-						<h2 class="mb-4">CADASTRO PROFISSIONAL</h2>
-						<form class="appointment" method="POST" action="/cadastro/profissional" >
-							<div class="row justify-content-center">
+		<div class="container">
+			<div class="row d-md-flex justify-content-center">
+				<div class="col-md-12">
+					<div class="wrap-appointment d-md-flex">
+						<div
+							class="col-md-12 bg-primary p-5 heading-section heading-section-white">
+							<h2 class="mb-4">CADASTRO PACIENTE</h2>
+							<form class="appointment" method="POST"
+								action="/cadastro/paciente">
+								<div class="row justify-content-center">
 									<div class="col-md-6">
 										<div class="form-group">
-							  <input type="text" class="form-control" placeholder="Nome completo">
-							</div>
+											<input type="text" class="form-control"
+												placeholder="Nome completo" id="nomeCompleto"
+												name="nomeCompleto">
+										</div>
 									</div>
 									<div class="col-md-2">
 										<div class="form-group">
-							  <input type="text" class="form-control" placeholder="Idade">
-							</div>
+											<input type="text" class="form-control" placeholder="Idade"
+												id="idade" name="idade">
+										</div>
 									</div>
 									<div class="col-md-4">
 										<div class="form-group">
-							  <input type="text" class="form-control" placeholder="CPF">
-							</div>
+											<input type="text" class="form-control" placeholder="CPF"
+												id="cpf" name="cpf">
+										</div>
 									</div>
 									<div class="col-md-4">
 										<div class="form-group">
-							  <input type="text" class="form-control" placeholder="CEP">
-							</div>
-									</div>
-									<div class="col-md-2">
-										<div class="form-group">
-							  <input type="text" class="form-control" placeholder="Cidade">
-							</div>
+											<input type="text" class="form-control" placeholder="CEP"
+												id="cep" name="cep">
+										</div>
 									</div>
 									<div class="col-md-4">
 										<div class="form-group">
-										<div class="form-field">
-									    <div class="select-wrap">
-							  <div class="icon"><span class="fa fa-chevron-down"></span></div>
-							  <select name="" id="" class="form-control">
-								  <option value="">Selecione a UF</option>
-								<option value="b">AC</option>
-								<option value="c">AL</option>
-								<option value="d">AP</option>
-								<option value="e">AM</option>
-								<option value="f">BA</option>
-								<option value="g">CE</option>
-								<option value="h">DF</option>
-								<option value="i">ES</option>
-								<option value="j">GO</option>
-								<option value="k">MA</option>
-								<option value="l">MT</option>
-								<option value="m">MS</option>
-								<option value="n">MG</option>
-								<option value="o">PA</option>
-								<option value="p">PB</option>
-								<option value="q">PR</option>
-								<option value="r">PE</option>
-								<option value="s">PI</option>
-								<option value="t">RJ</option>
-								<option value="w">RN</option>
-								<option value="x">RS</option>
-								<option value="y">RO</option>
-								<option value="z">RR</option>
-								<option value="01">SC</option>
-								<option value="02">SP</option>
-								<option value="03">SE</option>
-								<option value="04">TO</option>
-							  </select>
-							</div>
-							  </div>
-									</div>
+											<input type="text" class="form-control" placeholder="Cidade"
+												id="cidade" name="cidade">
+										</div>
 									</div>
 									<div class="col-md-4">
 										<div class="form-group">
-							  <input type="text" class="form-control" placeholder="Bairro">
-							</div>
+											<div class="form-field">
+												<div class="select-wrap">
+													<div class="icon">
+														<span class="fa fa-chevron-down"></span>
+													</div>
+													<select name="uf" id="uf" class="form-control">
+														<option value="null">Selecione a UF</option>
+														<option th:each="estado : ${estados}"
+															th:value="${estado.nome}" th:text="${estado.nome}"></option>
+													</select>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="col-md-4">
+										<div class="form-group">
+											<input type="text" class="form-control" placeholder="Bairro"
+												id="bairro" name="bairro">
+										</div>
 									</div>
 									<div class="col-md-6">
 										<div class="form-group">
-							  <input type="text" class="form-control" placeholder="Endereço">
-							</div>
+											<input type="text" class="form-control"
+												placeholder="Endereço" id="bairro" name="endereco">
+										</div>
 									</div>
 									<div class="col-md-2">
 										<div class="form-group">
-							  <input type="text" class="form-control" placeholder="Número">
-							</div>
+											<input type="text" class="form-control" placeholder="Número"
+												id="bairro" name="numero">
+										</div>
 									</div>
 									<div class="col-md-6">
 										<div class="form-group">
-							  <input type="text" class="form-control" placeholder="Email">
-							</div>
+											<input type="text" class="form-control" placeholder="Email"
+												id="email" name="email">
+										</div>
 									</div>
 									<div class="col-md-4">
 										<div class="form-group">
-							  <input type="text" class="form-control" placeholder="Senha">
-							</div>
+											<input type="text" class="form-control" placeholder="Senha"
+												id="senha" name="senha">
+										</div>
+									</div>
+								</div>
+								<div class="container-login100-form-btn m-t-32 marginleft8">
+									<button class="login100-form-btn">Cadastrar</button>
+								</div>
+								</form>
 						</div>
-								<div class="form-group">
-    							<label for="inputAddress">Dias disponíveis</label>
-									<div class="form-check form-check-inline">
-  								<input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
- 								 <label class="form-check-label" for="inlineCheckbox1">Segunda-Feira</label>
-									</div>
-									<div class="form-check form-check-inline">
-  								<input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
- 								 <label class="form-check-label" for="inlineCheckbox1">Terça-Feira</label>
-									</div>
-									<div class="form-check form-check-inline">
-  								<input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
- 								 <label class="form-check-label" for="inlineCheckbox1">Quarta-Feira</label>
-									</div>
-									<div class="form-check form-check-inline">
-  								<input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
- 								 <label class="form-check-label" for="inlineCheckbox1">Quinta-Feira</label>
-									</div>
-									<div class="form-check form-check-inline">
-  								<input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
- 								 <label class="form-check-label" for="inlineCheckbox1">Sexta-Feira</label>
-									</div>
-									<div class="form-check form-check-inline">
-  								<input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
- 								 <label class="form-check-label" for="inlineCheckbox1">Sábado</label>
-									</div>
-									</div>
-									
-									<div class="col-md-6">
-										<div class="form-group">
-										<div class="input-wrap">
-									<div class="icon"><span class="fa fa-clock-o"></span></div>
-									<input type="text" class="form-control appointment_time" placeholder="Das">
-								</div>
-									</div>
-									</div>
-									<div class="col-md-6">
-										<div class="form-group">
-										<div class="input-wrap">
-									<div class="icon"><span class="fa fa-clock-o"></span></div>
-									<input type="text" class="form-control appointment_time" placeholder="Até ás">
-								</div>
-									</div>
-									</div>
-						<div class="container-login100-form-btn m-t-32">
-						<button class="login100-form-btn">
-							Cadastrar
-						</button>
 					</div>
 				</div>
 			</div>
+	</section>
+
+	<section class="ftco-section">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-8"></div>
+			</div>
 		</div>
-	</div>
-</section>
+	</section>
+
+	<section id="cadastro-profissional"
+		class="ftco-appointment ftco-section ftco-no-pt ftco-no-pb">
+		<div class="overlay"></div>
+		<div class="container">
+			<div class="row d-md-flex justify-content-center">
+				<div class="col-md-12">
+					<div class="wrap-appointment d-md-flex">
+						<div
+							class="col-md-12 bg-primary p-5 heading-section heading-section-white">
+							<h2 class="mb-4">CADASTRO PROFISSIONAL</h2>
+							<form class="appointment" method="POST" action="/cadastro/profissional">
+								<div class="row justify-content-center">
+									<div class="col-md-6">
+										<div class="form-group">
+											<input type="text" class="form-control"
+												placeholder="Nome completo" id="nomeCompleto" name="nomeCompleto">
+										</div>
+									</div>
+									<div class="col-md-2">
+										<div class="form-group">
+											<input type="text" class="form-control" placeholder="Idade"
+												id="idade" name="idade">
+										</div>
+									</div>
+									<div class="col-md-4">
+										<div class="form-group">
+											<input type="text" class="form-control" placeholder="CPF"
+												id="cpf" name="cpf">
+										</div>
+									</div>
+									<div class="col-md-4">
+										<div class="form-group">
+											<input type="text" class="form-control" placeholder="CEP"
+												id="cep" name="cep">
+										</div>
+									</div>
+									<div class="col-md-2">
+										<div class="form-group">
+											<input type="text" class="form-control" placeholder="Cidade"
+												id="cidade" name="cidade">
+										</div>
+									</div>
+									<div class="col-md-4">
+										<div class="form-group">
+											<div class="form-field">
+												<div class="select-wrap">
+													<div class="icon">
+														<span class="fa fa-chevron-down"></span>
+													</div>
+													<select name="uf" id="uf" class="form-control">
+														<option value="null">Selecione a UF</option>
+														<option th:each="estado : ${estados}"
+															th:value="${estado.nome}" th:text="${estado.nome}"></option>
+													</select>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="col-md-4">
+										<div class="form-group">
+											<input type="text" class="form-control" placeholder="Bairro"
+												id="bairro" name="bairro">
+										</div>
+									</div>
+									<div class="col-md-6">
+										<div class="form-group">
+											<input type="text" class="form-control"
+												placeholder="Endereço" id="endereco" name="endereco">
+										</div>
+									</div>
+									<div class="col-md-2">
+										<div class="form-group">
+											<input type="text" class="form-control" placeholder="Número"
+												id="numero" name="numero">
+										</div>
+									</div>
+									<div class="col-md-6">
+										<div class="form-group">
+											<input type="text" class="form-control" placeholder="Email"
+												id="email" name="email">
+										</div>
+									</div>
+									<div class="col-md-4">
+										<div class="form-group">
+											<input type="text" class="form-control" placeholder="Senha"
+												id="senha" name="senha">
+										</div>
+									</div>
+									<div class="col-md-4">
+										<div class="form-group">
+											<input type="text" class="form-control" placeholder="CRP"
+												id="crp" name="crp">
+										</div>
+									</div>
+									<div class="form-group">
+										<label for="inputAddress">Dias disponíveis</label>
+										<div class="form-check form-check-inline">
+											<input class="form-check-input" type="checkbox"
+												id="diasDeAtendimento" name="diasDeAtendimento"
+												value="Segunda-Feira"> <label
+												class="form-check-label" for="inlineCheckbox1">Segunda-Feira</label>
+										</div>
+										<div class="form-check form-check-inline">
+											<input class="form-check-input" type="checkbox"
+												id="diasDeAtendimento" name="diasDeAtendimento"
+												value="Terça-Feira"> <label class="form-check-label"
+												for="inlineCheckbox1">Terça-Feira</label>
+										</div>
+										<div class="form-check form-check-inline">
+											<input class="form-check-input" type="checkbox"
+												id="diasDeAtendimento" name="diasDeAtendimento"
+												value="Quarta-Feira"> <label
+												class="form-check-label" for="inlineCheckbox1">Quarta-Feira</label>
+										</div>
+										<div class="form-check form-check-inline">
+											<input class="form-check-input" type="checkbox"
+												id="diasDeAtendimento" name="diasDeAtendimento"
+												value="Quinta-Feira"> <label
+												class="form-check-label" for="inlineCheckbox1">Quinta-Feira</label>
+										</div>
+										<div class="form-check form-check-inline">
+											<input class="form-check-input" type="checkbox"
+												id="diasDeAtendimento" name="diasDeAtendimento"
+												value="Sexta-Feira"> <label class="form-check-label"
+												for="inlineCheckbox1">Sexta-Feira</label>
+										</div>
+										<div class="form-check form-check-inline">
+											<input class="form-check-input" type="checkbox"
+												id="diasDeAtendimento" name="diasDeAtendimento"
+												value="Sábado"> <label class="form-check-label"
+												for="inlineCheckbox1">Sábado</label>
+										</div>
+										<div class="form-check form-check-inline">
+											<input class="form-check-input" type="checkbox"
+												id="diasDeAtendimento" name="diasDeAtendimento"
+												value="Domingo"> <label class="form-check-label"
+												for="inlineCheckbox1">Domingo</label>
+										</div>
+									</div>
+									<div class="form-group">
+										<label for="appt">Horario de início</label> <input
+											type="time" id="horaInicio" name="horaInicio" min="00:00"
+											max="23:59" required>
+									</div>
+									<div class="form-group">
+										<label for="appt">Horario de fim</label> <input
+											type="time" id="horaFim" name="horaFim" min="00:00" max="23:59"
+											required>
+									</div>
+									<div class="container-login100-form-btn m-t-32">
+										<button class="login100-form-btn">Cadastrar</button>
+									</div>
+								</div>
+								</form>
+						</div>
+					</div>
+				</div>
+	</section>
 </section>
 </html>

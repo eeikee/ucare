@@ -1,9 +1,16 @@
 package com.ucare.webucare.Controller;
 
+import java.sql.Time;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.RequestAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
@@ -12,8 +19,10 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import org.springframework.validation.Errors;
 import org.springframework.validation.annotation.Validated;
 
+import com.ucare.webucare.model.Estados;
 import com.ucare.webucare.model.Paciente;
 import com.ucare.webucare.model.Profissional;
+import com.ucare.webucare.model.User;
 import com.ucare.webucare.repository.Pacientes;
 import com.ucare.webucare.repository.Profissionais;
 
@@ -135,16 +144,31 @@ public class ucareController {
     public ModelAndView salvarPaciente(Paciente paciente) {
     	ModelAndView mView = new ModelAndView("cadastro");
     	pacientes.save(paciente);
-    	mView.addObject("mensagem", "Cadastro efetuado com sucesso!");
+    	mView.addObject("mensagem", "Paciente cadastrado com sucesso!");
     	return mView;
     }
     
     @RequestMapping(value = "/cadastro/profissional", method = RequestMethod.POST)
-    public ModelAndView salvarPaciente(Profissional profissional) {
-    	ModelAndView mView = new ModelAndView("cadastro");
+    public String salvarPaciente(@Validated Profissional profissional, Errors error, RedirectAttributes ra) {
+    	if(error.hasErrors()) {
+    		return "redirect:/cadastro";
+    	}
     	profissionais.save(profissional);
-    	mView.addObject("mensagem", "Cadastro efetuado com sucesso!");
-    	return mView;
+    	ra.addFlashAttribute("mensagem", "Profissional cadastrado com sucesso!");
+    	return "redirect:/cadastro";
     }
     
+    @ModelAttribute("estados")
+    public List<Estados> listarEstados(){
+    	return Arrays.asList(Estados.values());
+    }
+    
+    @ModelAttribute("todosPsicologo")
+    public List<String> listarProfissionais(){
+    	List<String> todosPsicologo = new ArrayList<String>();
+    	for (Profissional pro : profissionais.findAll()) {
+			todosPsicologo.add(pro.getNomeCompleto());
+		}
+    	return todosPsicologo;
+    }
 }
