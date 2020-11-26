@@ -43,13 +43,13 @@
           </div>
         </div>
 
-				<section class="ftco-section">
+				<section th:if="${usuarioLogado} == true" class="ftco-section">
 					<div class="container">
 						<div class="col-md-6 marginleft2">
 							<div class="row no-gutters justify-content-center  mb-3">
 								<select class="custom-select custom-select-sm">
 									<option selected>Escolha o profissinal</option>
-									<option th:each="psicologo : ${todosPsicologo}"th:text="|Dr. ${psicologo}|" ></option>
+									<option th:each="psicologo : ${todosPsicologo}"th:text="|Dr. ${psicologo.nomeCompleto}|" ></option>
 								</select>
 						</div>					
 						
@@ -73,6 +73,12 @@
 								AGENDAR
 							</button>
 						</div>
+					</div>
+				</section>
+				<section th:if="${usuarioLogado} == false" class="ftco-section">
+					<h2 class="container-login100-form-btn m-t-32">Ops, você precisa estar logado para agendar uma consulta...</h2>
+					<div class="container-login100-form-btn m-t-32">
+					<a type="submit" class="button login100-form-btn" href="/home/#login">Ir para tela de login</a>
 					</div>
 				</section>
 			</div>

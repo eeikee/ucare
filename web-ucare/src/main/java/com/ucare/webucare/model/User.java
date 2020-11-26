@@ -1,25 +1,12 @@
 package com.ucare.webucare.model;
 
-import br.com.caelum.stella.validation.CPFValidator;
-import com.ucare.webucare.model.cep.ViaCEP;
-import com.ucare.webucare.model.cep.ViaCEPException;
-
-import java.io.Serializable;
-
-import javax.annotation.Generated;
 import javax.persistence.Column;
-import javax.persistence.DiscriminatorColumn;
-import javax.persistence.DiscriminatorType;
-import javax.persistence.DiscriminatorValue;
-import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.Inheritance;
-import javax.persistence.InheritanceType;
 import javax.persistence.MappedSuperclass;
 
-import org.json.JSONException;
+import br.com.caelum.stella.validation.CPFValidator;
 
 @MappedSuperclass
 public abstract class User{
@@ -50,8 +37,18 @@ public abstract class User{
     private String email;
     
     private String senha;
+    
+    private boolean logado;
 
-    public Long getId() {
+    public boolean isLogado() {
+		return logado;
+	}
+
+	public void setLogado(boolean logado) {
+		this.logado = logado;
+	}
+
+	public Long getId() {
 		return id;
 	}
 

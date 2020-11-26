@@ -32,24 +32,23 @@
             </div>
         </div>
 
-        <div class="container">
+        <div class="container align-items-center justify-content-center">
             <div class="card">
-                <div classs="card-body">
+                <div classs="card-body align-items-center justify-content-center container">
             <div class="row no-gutters justify-content-center pb-5 mb-3">
-                <div class="col-md-7 heading-section text-center ftco-animate">
+                <div class="col-md-6 heading-section text-center ftco-animate">
                     <div class="posted mb-3 d-flex">
                         <div class="text mt-3">
-                            <h3 class="text-perfil">NOME: Angelina Cristina Barboza de Faria</h3>
-                            <h3 class="text-perfil">IDADE: XX</h3>
-                            <h3 class="text-perfil margin2">CPF: XXXXXXX-X</h3>
-                            <h3 class="text-perfil">CEP: XXXXXXX-X</h3>
-                            <h3 class="text-perfil">CIDADE: XXXXXXX</h3>
-                            <h3 class="text-perfil">UF: XX</h3>
-                            <h3 class="text-perfil">BAIRRO: XXXXXXXXXXXXXXXXXXXXX</h3>
-                            <h3 class="text-perfil">ENDEREÇO: XXXXXXXXXXXXXXXXXXXX</h3>
-                            <h3 class="text-perfil">NÚMERO: XXXX</h3>
-                            <h3 class="text-perfil margin2">E-MAIL: angelina@facens.com</h3>
-                            <h3 class="text-perfil">SENHA: XXXXXXXXXX</h3>
+                            <h3 class="text-perfil" th:text="|Nome: ${UsuarioLogado.nomeCompleto}|">NOME: Angelina Cristina Barboza de Faria</h3>
+                            <h3 class="text-perfil" th:text="|Idade: ${UsuarioLogado.idade} anos|">IDADE: XX</h3>
+                            <h3 class="text-perfil margin2" th:text="|CPF: ${UsuarioLogado.cpf}|">CPF: XXXXXXX-X</h3>
+                            <h3 class="text-perfil" th:text="|CEP: ${UsuarioLogado.cep}|">CEP: XXXXXXX-X</h3>
+                            <h3 class="text-perfil"th:text="|Cidade: ${UsuarioLogado.cidade}|" >CIDADE: XXXXXXX</h3>
+                            <h3 class="text-perfil" th:text="|Estado: ${UsuarioLogado.uf}|">UF: XX</h3>
+                            <h3 class="text-perfil"th:text="|Bairro: ${UsuarioLogado.bairro}|">BAIRRO: XXXXXXXXXXXXXXXXXXXXX</h3>
+                            <h3 class="text-perfil"th:text="|Endereço: ${UsuarioLogado.endereco}|">ENDEREÇO: XXXXXXXXXXXXXXXXXXXX</h3>
+                            <h3 class="text-perfil"th:text="|Número: ${UsuarioLogado.numero}|">NÚMERO: XXXX</h3>
+                            <h3 class="text-perfil margin2"th:text="|Email: ${UsuarioLogado.email}|">E-MAIL: angelina@facens.com</h3>
                             <!-- Botão para acionar modal -->
                             <button type="button" class="btn btn-primary margin2 marginleft" data-toggle="modal" data-target="#ExemploModalCentralizado">
                                 Alterar

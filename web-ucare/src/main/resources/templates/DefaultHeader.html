@@ -26,18 +26,18 @@
 					<div class="col-md-3 mb-md-0 mb-4 d-flex align-items-center">
 						<a class="navbar-brand" href="/home">UCARE</a>
 					</div>
-								<div class="d-flex">
+								<div class="d-flex" th:if="${UsuarioLogado} != null">
 									<div class="d-flex align-items-center justify-content-center"><img src="/images/logoUcare.jpeg" width="100"></div>
 									<li class="nav-item dropdown">
-										<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+										<a class="nav-link dropdown-toggle" th:text="|Seja bem-vindo, ${UsuarioLogado.nomeCompleto}|"href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 										  Seja bem-vindo
 										</a>
 										<div class="dropdown-menu" aria-labelledby="navbarDropdown">
 										  <a class="dropdown-item" href="/perfil">Meu Perfil</a>
 										  <a class="dropdown-item" href="/minhasconsultas">Minhas consultas</a>
-										  <a class="dropdown-item" href="/avaliacao">Avaliações</a>
-										  <div class="dropdown-divider"></div>
-										  <a class="dropdown-item" href="#">Sair</a>
+										  <!-- <a class="dropdown-item" href="/avaliacao">Avaliações</a>
+ -->										  <div class="dropdown-divider"></div>
+										  <a class="dropdown-item" href="/logout">Sair</a>
 										</div>	
 										  </li>			
 				</div>
