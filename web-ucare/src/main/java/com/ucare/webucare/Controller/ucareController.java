@@ -1,9 +1,13 @@
 package com.ucare.webucare.Controller;
 
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.mail.SimpleMailMessage;
+import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.Errors;
 import org.springframework.validation.annotation.Validated;
@@ -14,10 +18,12 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
+import com.ucare.webucare.model.Consulta;
 import com.ucare.webucare.model.Estados;
 import com.ucare.webucare.model.LogUser;
 import com.ucare.webucare.model.Paciente;
 import com.ucare.webucare.model.Profissional;
+import com.ucare.webucare.repository.ConsultaRepository;
 import com.ucare.webucare.repository.LogUserRepository;
 import com.ucare.webucare.repository.Pacientes;
 import com.ucare.webucare.repository.Profissionais;
@@ -33,6 +39,12 @@ public class ucareController {
 
 	@Autowired
 	private LogUserRepository logUser;
+	
+	@Autowired
+	private ConsultaRepository cr;
+	
+	 @Autowired 
+	 private JavaMailSender mailSender;
 
 	@ModelAttribute("LoggedPaciente")
 	public Paciente pacienteLogado() {
@@ -52,6 +64,17 @@ public class ucareController {
 			}
 		}
 		return null;
+	}
+	
+	@ModelAttribute("minhasConsultas")
+	public List<Consulta> consultas(){
+		List<Consulta> consultas = new ArrayList<>();
+		for (Consulta consulta : cr.findAll()) {
+			if(pacienteLogado().getId() == consulta.getPaciente().getId()) {
+				consultas.add(consulta);
+			}
+		}
+		return consultas;
 	}
 
 	@GetMapping("/logout")
@@ -73,6 +96,42 @@ public class ucareController {
 		return "index";
 	}
 
+	@RequestMapping(value = "/agendar", method = { RequestMethod.GET, RequestMethod.POST })
+	public ModelAndView agendar(@Validated Consulta consulta){
+		ModelAndView mv =  new ModelAndView("minhasconsultas");
+		cr.save(consulta);
+		/*
+		 * Paciente paciente = pacientes.getOne(consulta.getPaciente().getId()); if
+		 * (paciente.getConsulta().isEmpty()) { List<Consulta> consultas = new
+		 * ArrayList<>();; paciente.setConsulta(consultas);
+		 * paciente.getConsulta().add(consulta); pacientes.save(paciente); } else {
+		 * paciente.getConsulta().add(consulta); pacientes.save(paciente); }
+		 * Profissional profissional =
+		 * profissionais.getOne(consulta.getProfissional().getId()); if
+		 * (profissional.getConsulta().isEmpty()) { List<Consulta> consultas = new
+		 * ArrayList<>(); profissional.setConsulta(consultas);
+		 * profissional.getConsulta().add(consulta); profissionais.save(profissional); }
+		 * else { profissional.getConsulta().add(consulta);
+		 * profissionais.save(profissional); } mv.addObject("minhasConsultas",
+		 * pacienteLogado());
+		 */
+		
+		/*
+		 * SimpleMailMessage message = new SimpleMailMessage();
+		 * message.setText("Hello from Spring Boot Application");
+		 * message.setTo("konumaeike5618@hotmail.com");
+		 * message.setFrom("ucare4web@outlook.com");
+		 * 
+		 * try { mailSender.send(message);
+		 * 
+		 * } catch (Exception e) { e.printStackTrace();
+		 * 
+		 * }
+		 */
+		mv.addObject("minhasConsultas", consultas());
+		return mv;
+	}
+	
 	@RequestMapping("/home")
 	public ModelAndView home() {
 
@@ -329,3 +388,6 @@ public class ucareController {
 	}
 
 }
+
+
+

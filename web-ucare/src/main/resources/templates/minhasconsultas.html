@@ -1,63 +1,64 @@
 <!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml"
-	xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="DefaultLayout">
-  <head>
-    <title>UCARE - MINHAS CONSULTAS</title>
-  </head>
-  <section layout:fragment="content">	
-  
-  <div class="collapse navbar-collapse" id="ftco-nav">
-	        <ul class="navbar-nav mr-auto">
-				<li class="nav-item">
-					<a class="nav-link" href="/home">HOME</a>
-				</li>
-				<li class="nav-item"><a href="/cadastro" class="nav-link">CADASTRO</a></li>
-	        	<li class="nav-item"><a href="/agendamentos" class="nav-link">AGENDAMENTOS</a></li>
-	        	<li class="nav-item"><a href="/dicas" class="nav-link">DICAS</a></li>
-	        	<li class="nav-item"><a href="/ajuda" class="nav-link">AJUDA</a></li>
-	        	<li class="nav-item"><a href="/sobre" class="nav-link">SOBRE</a></li>
-	        	<li class="nav-item"><a href="/fale-conosco" class="nav-link">FALE CONOSCO</a></li>
-	        </ul>
-	      </div>
-	    </div>
-	  </nav>
-	  <div class="alert alert-success" role="alert">
-  		Você tem uma consulta!
+	xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorate="DefaultLayout">
+<head>
+<title>UCARE - MINHAS CONSULTAS</title>
+</head>
+<section layout:fragment="content">
+
+	<div class="collapse navbar-collapse" id="ftco-nav">
+		<ul class="navbar-nav mr-auto">
+			<li class="nav-item"><a class="nav-link" href="/home">HOME</a></li>
+			<li class="nav-item"><a href="/cadastro" class="nav-link">CADASTRO</a></li>
+			<li class="nav-item"><a href="/agendamentos" class="nav-link">AGENDAMENTOS</a></li>
+			<li class="nav-item"><a href="/dicas" class="nav-link">DICAS</a></li>
+			<li class="nav-item"><a href="/ajuda" class="nav-link">AJUDA</a></li>
+			<li class="nav-item"><a href="/sobre" class="nav-link">SOBRE</a></li>
+			<li class="nav-item"><a href="/fale-conosco" class="nav-link">FALE
+					CONOSCO</a></li>
+		</ul>
 	</div>
-	  
-	  
-	  <section class="ftco-section">
-            <div class="row no-gutters justify-content-center mb-3">
-                <div class="col-md-4 heading-section text-center ftco-animate">
-                    <span class="subheading">UCARE</span>
-                    <h2>MINHAS CONSULTAS</h2>
-                </div>
-            </div>
-    </section>
-	    
-	 <form>
-	 <div class="container">
-            <div class="card">
-                <div classs="card-body">
-                <div class="col-md-4 heading-section text-center ftco-animate align-items-center justify-content-center container">
-			  <div class="form-group">
-			    <label for="exampleFormControlInput1">Médico</label>
-			    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Dr. Rafael Godoi">
-			  </div>
-			  <div class="form-group">
-			    <label for="exampleFormControlInput1">Dia</label>
-			    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="11/30/2020">
-			  </div>
-			  <div class="form-group">
-			    <label for="exampleFormControlInput1">Hora</label>
-			    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="7:00pm">
-			  </div>          
-         </div>
-        </div>
-        </div>
-        </div>
-	  </form>
-    
-   	 
-	  
+	</div>
+	</nav>
+
+
+	<section class="ftco-section">
+		<div class="row no-gutters justify-content-center mb-3">
+			<div class="col-md-4 heading-section text-center ftco-animate">
+				<span class="subheading">UCARE</span>
+				<h2>MINHAS CONSULTAS</h2>
+			</div>
+		</div>
+	</section>
+
+	<div class="container">
+	<section  th:if="${#lists.isEmpty(minhasConsultas)}">
+				<h2 class="container-login100-form-btn m-t-32">Agenda livre! Você não possui
+					nem uma consulta agendada.</h2>
+				<div class="container-login100-form-btn m-t-32">
+					<a type="submit" class="button login100-form-btn"
+						href="/home/#login">Ir para tela de login</a>
+				</div>
+			</section>
+		<div class="card" th:each="consulta : ${minhasConsultas}">
+			<div class="card-body">
+				<div class="col-md-4 heading-section text-center ftco-animate align-items-center justify-content-center container">
+						<div class="form-group">
+							<label for="exampleFormControlInput1">Médico</label>
+							<h2 th:text="${consulta.profissional.nomeCompleto}"></h2>
+						</div>
+						<div class="form-group">
+							<label for="exampleFormControlInput1">Dia</label>
+							<h2 th:text="${consulta.data_consulta}"></h2>
+						</div>
+						<div class="form-group">
+							<label for="exampleFormControlInput1">Hora</label>
+							<h2 th:text="${consulta.horario}"></h2>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 </html>

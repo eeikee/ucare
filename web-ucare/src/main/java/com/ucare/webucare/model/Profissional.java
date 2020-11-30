@@ -6,6 +6,7 @@ import javax.persistence.Entity;
 import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Entity
@@ -16,7 +17,19 @@ public class Profissional extends User{
     
     private String horaInicio;
     private String horaFim;
+    
+    @OneToMany(mappedBy = "profissional")
+	private List<Consulta> consulta;
+
    
+	public List<Consulta> getConsulta() {
+		return consulta;
+	}
+
+	public void setConsulta(List<Consulta> consulta) {
+		this.consulta = consulta;
+	}
+
 	@ManyToMany
 	@JoinTable(
 			name= "profissional_dias",
